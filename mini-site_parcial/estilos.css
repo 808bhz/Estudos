@@ -1,0 +1,166 @@
+/* Regra universal para mudança do Box Model 
+para todas as tags */
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-color: rgb(217, 221, 223); */
+    background-image: url(imagens/double-bubble-dark.png);
+    
+    /* Imagem de plano de fundo "cubra" todo
+    o espaço disponível. Obs.: isso pode degradar
+    a qualidade de imagem em telas muito grande. */
+    background-size: cover;
+
+    /* Fixar/Prender a imagem ao fundo, ou seja,
+    ela não irá rolar junto com o conteúdo. */
+    background-attachment: fixed;
+}
+
+h1 { 
+    background: linear-gradient(to bottom, #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%);
+
+    color: white;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    letter-spacing: 10px;
+    word-spacing: 30px;
+
+    position: sticky;
+    top: 0;
+}
+
+/* Seletor tipo ID/IDENTIFICADO
+Restritivo, só pode ser usado em um elemento (id é algo único) */
+#container {
+    background-color: rgba(245, 245, 245, 0.945);
+    width: 80%; 
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Tornando as imagens flexíveis/responsivas */
+img { max-width: 100%; }
+
+/* Seletor tipo CLASSE
+(versátil, pode ser reaproveitado em 
+partes diferentes da mesma página) */
+.centralizar { text-align: center; }
+
+.borda-arredondada { border-radius: 5px; }
+.sombra-texto { text-shadow: black 2px 2px 5px; }
+.destaque { background-color: yellow; }
+
+h2 {
+    background-image: url(imagens/oriental-tiles.png);
+    color: white;
+    border-right: solid 20px black;
+    border-bottom: solid 5px black;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+/* Regras para links do menu */
+nav { text-align: center; }
+
+/* 1) Estado inicial dos links
+Seletor tipo DESCENDENTE */
+nav a { 
+    text-decoration: none;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 50%;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+/* 2) Estados de acionamento do link
+:hover -> pseudo-classe de mouse
+:focus -> pseudo-classe para teclado
+
+Obs: repare que agrupamos os seletores
+usando vírgula. */
+nav a:hover, nav a:focus {
+    background-color: darkblue;
+    color: yellow;
+    text-shadow: black 1px 1px 2px;
+    transform: scale(1.01); 
+    /* transform: translateY(-3px); */
+    /* transform: rotateX(360deg); */
+    /* transform: scale(1.01) translateY(-3px); */
+}
+
+ul li { font-weight: bold; }
+
+/* Outras pseudo-classes */
+ul li:first-child { color: red; }
+ul li:last-child { color: purple; }
+ul li:nth-child(3) { color: green; }
+
+/* itens ímpares */
+ul li:nth-child(odd) { background-color: yellow; }
+
+/* itens pares */z
+ul li:nth-child(even) { background-color: grey; }
+
+/* ul li:nth-child(3n+1) { 
+    background-color: yellow;
+}  */
+
+/* ul li:nth-child(2),
+ul li:nth-child(4),
+ul li:nth-child(6) { color: blue; } */
+
+
+figure img {
+    filter: grayscale(100%);
+    transition: 1s;
+   
+}
+figure img:hover { filter:  grayscale(0) drop-shadow(black  0px 20px 20px);
+transform: rotate(2deg) scale(1.10); }
+
+.mascara {clip-path: circle(70.7% at 50% 50%);;
+transition: 0.7s;}
+.mascara:hover {
+    clip-path: circle(54.0% at 50% 50%);
+}
+figure { margin: 0%;
+padding: 0%;
+text-align: center;
+position: relative;
+width: 419px;
+margin: auto;
+}
+
+figcaption{
+    font-weight: bold;
+    color:white;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    background-color: black ;
+    width: 100%;
+    transition: 1s
+
+
+}
+figure:hover figcaption{
+    transition: 1s;
+    transform: scale(1.4) rotatez(-3deg);
+    opacity: 10%;
+    
+}
+h4 {
+    font-size: 30px;
+    animation: mudacor 5s infinite alternate;
+}

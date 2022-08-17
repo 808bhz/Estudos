@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile First</title>
+<style>
+/* Regras de uso geral 
+O que codificamos aqui é tudo que será usado
+no site não importando muito o tamanho da tela. */
+* { box-sizing: border-box; }
+body {
+    font-family: Verdana;
+    background-color: lightblue;
+}
+h1 { 
+    font-size: 25px; 
+    border-bottom: solid 1px;
+}
+h2 { 
+    font-size: 20px; 
+    color: darkblue;
+}
+p { font-size: 18px; }
+
+/* Regras de uso condicional (media queries) */
+@media screen and ( min-width: 563px ) {
+    h1 { 
+        font-size: 35px; 
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 783px) {
+    body { background-color: rgb(119, 204, 233); }
+    h1 {
+        border-left: solid 10px;
+        border-right: solid 10px;
+    }
+}
+
+/* Exercício Mobile First 
+Crie uma nova media query para telas a partir de 850px
+que faça as seguintes alterações:*/
+@media screen and (min-width: 850px){
+    /* -corpo da página com plano de fundo gradiente */
+    body { background: 
+        linear-gradient(lightblue, lightgreen);
+    }
+
+    /* -parágrafos com tamanho de texto em 22px, altura de linha de 30px e outra fonte (Segoe UI, Arial ou outra) */
+    p {
+        font-size: 22px;
+        line-height: 30px;
+        font-family: 'Segoe UI', Arial;
+    }
+    
+    /* -subtitulo h2: alinhe à direita e aplique uma sombra */
+    h2 {
+        text-align: right;
+        text-shadow: black 1px 1px 2px;
+    }
+
+    /*-negrito: coloque um padding de qualquer valor e cor de plano de fundo. */
+    b { 
+        padding: 5px;
+        background-color: white;
+    }
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+    <h1>Design Responsivo</h1>
+    <p>Conjunto de técnicas de desenvolvimento fron-end visando a construção de sites que funcionem corretamente em dispositivos com telas de tamanho diferentes.</p>
+    <h2>Exemplo Mobile First</h2>
+    <p>Em resumo: <b>vai da tela pequena para a tela grande.</b></p>
+</body>
+</html>

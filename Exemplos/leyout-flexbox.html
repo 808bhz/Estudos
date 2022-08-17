@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout Flexbox</title>
+<style>
+* { box-sizing: border-box; } 
+body {
+    font-family: Verdana;
+    background-color: lightgoldenrodyellow;
+}
+h1 { text-align:center; }
+#exemplo {
+    margin: auto;
+    width: 80%;
+}
+.colunas {
+    border: solid 1px;
+    background-color: lightblue;
+    height: 50px;
+}
+
+@media screen and (min-width: 600px) {
+    #exemplo { display: flex; }
+    .colunas { width: 50%; }
+}
+
+/* Crie uma nova media query para que, 
+a partir de telas com 700px, a coluna um fique maior que a coluna 2. Mude também a cor das duas colunas (cores diferentes). */
+@media screen and (min-width: 700px){
+    #exemplo { justify-content: space-between; }
+    #um { 
+        width: 68%; 
+        background-color: yellow;
+    }
+    #dois { 
+        width: 30%; 
+        background-color: green;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    #exemplo { flex-direction: column; }
+    #um, #dois { width: auto; }
+}
+
+</style>
+</head>
+<body>
+    <h1>Design responsivo com Flexbox</h1>
+    
+    <div id="exemplo">
+        <div class="colunas" id="um">UM</div>
+        <div class="colunas" id="dois">DOIS</div>
+    </div>
+</body>
+</html>

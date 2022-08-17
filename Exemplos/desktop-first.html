@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desktop First</title>
+<style>
+/* Regras de uso geral 
+O que codificamos aqui é tudo que será usado
+no site não importando muito o tamanho da tela. */
+* { box-sizing: border-box; }
+body {
+    font-family: Verdana;
+    background-color: lightblue;
+}
+h1 { 
+    font-size: 35px; 
+    border-bottom: solid 1px;
+}
+h2 { 
+    font-size: 25px; 
+    color: darkblue;
+}
+p { 
+    font-size: 22px; 
+    line-height: 30px;
+}
+
+/* Regras de uso condicional (media queries) */
+@media screen and (max-width: 707px) {
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; }
+    p { font-size: 18px; }
+    body { background-color: lightgreen; }
+}
+
+@media screen and (max-width: 533px) {
+    h1 { border: none; }
+    p { font-size: 16px; text-align: center; }
+}
+
+</style>
+</head>
+<body>
+    <h1>Design Responsivo</h1>
+    <p>Conjunto de técnicas de desenvolvimento fron-end visando a construção de sites que funcionem corretamente em dispositivos com telas de tamanho diferentes.</p>
+    <h2>Exemplo Desktop First</h2>
+    <p>Em resumo: <b>vai da tela grande para a tela pequena.</b></p>
+</body>
+</html>

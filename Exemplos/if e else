@@ -1,0 +1,5 @@
+if(pagina.className == "modo-noturno"){
+    botao.textContent="desativar";
+    } else { 
+     botao.textContent="ativar";
+    }
